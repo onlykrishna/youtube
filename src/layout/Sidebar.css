@@ -1,0 +1,91 @@
+/* Sidebar Container */
+.sidebar {
+  background: #fff;
+  width: 15%; /* Sidebar width */
+  height: 100vh; /* Full window height */
+  position: fixed;
+  top: 60px; /* Adjust to avoid overlap with navbar */
+  left: 0;
+  padding-top: 10px; /* Adjust padding if needed */
+  font-size: 16px;
+  overflow-y: auto; /* Vertical scrollbar when content overflows */
+  scrollbar-width: thin; /* Firefox scrollbar width */
+  scrollbar-color: #ccc transparent;
+  z-index: 10; /* Ensure it's above the content */
+}
+
+.sidebar::-webkit-scrollbar {
+  width: 8px; /* Scrollbar width */
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+  background-color: #ccc; /* Scrollbar thumb color */
+  border-radius: 5px;
+}
+
+.sidebar hr {
+  border: none;
+  height: 1px;
+  background: #ccc;
+  margin: 10px 0;
+}
+
+.sidebar h3 {
+  margin-left: 20px;
+  color: #888;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+/* Icon and Text Styling */
+.icon {
+  font-size: 20px;
+  margin-right: 15px;
+  color: #333;
+}
+
+.short-sidebar-menu li,
+.middle-menu li,
+.subscribed-menu li {
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  font-size: 16px;
+  color: #333;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.short-sidebar-menu li:hover,
+.middle-menu li:hover,
+.subscribed-menu li:hover {
+  background: #f0f0f0;
+}
+
+/* Section Layout */
+.short-sidebar-menu,
+.middle-menu,
+.subscribed-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Reduce Top Padding for Better Spacing */
+.short-sidebar {
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+.middle-menu li {
+  padding: 12px 20px;
+}
+
+.subscribed-menu li {
+  padding: 12px 20px;
+}
+
+.subscribed-list h3 {
+  margin-bottom: 10px;
+}

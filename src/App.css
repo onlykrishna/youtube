@@ -1,0 +1,38 @@
+Layout adjustments
+.layout {
+  display: flex;
+}
+
+.sidebar {
+  height: 100vh;
+  background: #fff;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  transition: width 0.3s ease;
+}
+
+/* Expanded Sidebar */
+.sidebar.expanded {
+  width: 15%;
+  padding: 20px;
+}
+
+/* Collapsed Sidebar */
+.sidebar.collapsed {
+  width: 5%;
+  padding: 10px 5px;
+}
+
+.content {
+  flex-grow: 1;
+  padding: 20px;
+  transition: margin-left 0.3s ease;
+}
+
+/* Adjust content margin for expanded and collapsed states */
+.layout.expanded .content {
+  margin-left: 15%;
+}
+
+.layout.collapsed .content {
+  margin-left: 5%;
+}
